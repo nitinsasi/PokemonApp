@@ -1,0 +1,56 @@
+
+<div style="display:inline-block;margin-top: 20px;">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="search by id"  id=name  #myInput name=name>
+  </mat-form-field>
+
+  <button mat-raised-button color="warn" (click)="get_Pokemon(myInput.value)">submit</button>
+</div>
+
+<div *ngIf="loading">
+  <mat-spinner class="loader"></mat-spinner>
+  <div style="color: red;text-align: center;"><h2>{{errorMsg}}</h2></div>
+</div>
+
+<div style="overflow: auto;">
+<mat-card *ngFor="let user of PokemonData.forms" class="card1">
+
+ 
+<mat-card-title>Pokemon Details</mat-card-title>
+
+<mat-card-content>
+  <mat-card-subtitle style="color: white; font-size: medium;"><b>ID:</b> {{PokemonData.id}}</mat-card-subtitle><br>
+  <mat-card-subtitle style="color: white; font-size: medium;"><b>Name:</b> {{PokemonData.name}}</mat-card-subtitle>
+  <br>
+  <mat-card-subtitle style="color: white; font-size: medium;"><b>Order:</b> {{PokemonData.order}}</mat-card-subtitle>
+  <br>
+  
+</mat-card-content>
+
+
+</mat-card>
+
+
+
+
+<mat-card *ngFor="let user of PokemonDataId.forms" class="card1" style="margin-bottom: 20px;">
+
+  <mat-card-content>
+    <mat-card-subtitle style="color: white; font-size: medium;"><b>ID:</b> {{PokemonDataId.id}}</mat-card-subtitle><br>
+    <mat-card-subtitle style="color: white; font-size: medium;"><b>Name:</b> {{PokemonDataId.name}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white; font-size: medium;"><b>Order:</b> {{PokemonDataId.order}}</mat-card-subtitle>
+    <br>
+    
+  </mat-card-content>
+  
+  
+  </mat-card>
+</div>
+
+
+
+
+
+
+

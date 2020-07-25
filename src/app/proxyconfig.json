@@ -1,0 +1,8 @@
+{
+    "/api/v2/pokemon-species/132/":{
+        "target":"https://pokeapi.co",
+"secure":false,
+"changeOrigin":true,
+"logLevel":"debug"
+    }
+}
